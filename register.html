@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Register Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+          body{
+              background-color: hsl(0, 0%, 96%);
+          }
+          .card{
+            margin: 20px
+          }
+        </style>
+    <head>
+    <body>
+        <section class="vh-100">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-9 col-xl-7">
+                  <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+          
+                      <h3 class="mb-5">Sign Up</h3>
+                        <form action="/register" method="post">
+          
+                            <div class="form-floating">
+                              <input type="text" class="form-control" id="userName" name="username" placeholder="User Name">
+                              <label for="userName">User Name</label>
+                            </div>
+                            <br>
+                            <div class="form-floating">
+                              <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+                              <label for="floatingPassword">Password</label>
+                            </div>
+                            <br>
+                            <div class="form-floating">
+                              <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+                              <label for="floatingInput">Email address</label>
+                            </div>
+                            <br>
+                            <div class="row g-2">
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <input type="text" class="form-control" id="floatingInputGrid" name="phoneNumber" placeholder="Phone Number">
+                                  <label for="floatingInputGrid">Phone</label>
+                                </div>
+                              </div>
+                              <div class="col-md">
+                                <div class="form-floating">
+                                  <select class="form-select" name="gender" id="floatingSelectGrid">
+                                    <option selected>Male</option>
+                                    <option value="1">Female</option>
+                                  </select>
+                                  <label for="floatingSelectGrid">Gender</label>
+                                </div>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-floating">
+                              <input type="text" class="form-control" id="userName" name="belief" placeholder="User Name">
+                              <label for="userName">Your strongest belief</label>
+                            </div>
+                            <br>
+                            <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" name="about" id="floatingTextarea2" style="height: 150px"></textarea>
+                              <label for="floatingTextarea2">Comments</label>
+                            </div>
+
+                            
+                            <hr class="my-4">
+                
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
+                        </form>
+          
+                      
+          
+          
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </body>
+</html>

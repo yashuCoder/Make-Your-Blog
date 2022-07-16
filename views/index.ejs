@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Blog Website</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+          .bottom-heading{
+            text-align: center;
+          }
+        </style>
+    <head>
+    <body>
+        <section class="">
+            <!-- Jumbotron -->
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+              <div class="container">
+                <div class="row gx-lg-5 align-items-center">
+                  <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-4 fw-bold ls-tight">
+                      Make Everyone <br />
+                      <span class="text-primary">See Your Thoughts</span>
+                    </h1>
+                    <p style="color: hsl(217, 10%, 50.8%)">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                      quibusdam tempora at cupiditate quis eum maiores libero
+                      veritatis? Dicta facilis sint aliquid ipsum atque?
+                    </p>
+                  </div>
+          
+                  <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                      <div class="card-body py-5 px-md-5">
+                        <form action="/" method="post">
+                          <!-- Email input -->
+                          <div class="form-outline mb-4">
+                            <input type="text" id="username" name="username" class="form-control" />
+                            <label class="form-label" for="username">User Name</label>
+                          </div>
+          
+                          <!-- Password input -->
+                          <div class="form-outline mb-4">
+                            <input type="password" id="password" name="password" class="form-control" />
+                            <label class="form-label" for="password">Password</label>
+                          </div>
+                          <!-- Submit button -->
+                          <button type="submit" class="btn btn-primary btn-block mb-4">
+                            Log in
+                          </button>
+                          
+                          <p>Don't have an account? <a href="/register" class="link-info">Register here</a></p>
+                          <% if(error === "userName empty"){ %>
+                            <p style="color:red" id="error">Please fill the user name</p>
+                          <% } %>
+                          <% if(error === "userName error"){ %>
+                            <p style="color:red" id="error">Register if you don't have an account</p>
+                          <% } %>
+                          <% if(error === "password empty"){ %>
+                            <p style="color:red" id="error">Please fill the password</p>
+                          <% } %> 
+                          <% if(error === "password wrong"){ %>
+                            <p style="color:red" id="error">Please check your password</p>
+                          <% } %>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 class="my-5 display-4 fw-bold ls-tight bottom-heading">
+                Make Your 
+                <span class="text-primary">Own Blogs</span>
+              </h1>
+            <!-- Jumbotron -->
+          </section>
+          <script src="app.js"></script>
+    </body>
+</html>

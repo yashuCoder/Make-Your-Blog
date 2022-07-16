@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Blogs</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .custom-card{
+                margin: 10px 150px;
+                width: 60rem;
+                box-shadow: -7px 7px 10px grey;
+            }
+            .buttons{
+                display: inline-block;
+            }
+            .edit-button{
+                text-align: right;
+            }
+            .delete-button{
+                text-align: left;
+            }
+            .button{
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                margin: 15px 5px;
+                display: inline-block;
+                background-color: white;
+                text-align: left;
+                overflow: hidden;
+                border-radius: 50px;
+                cursor: pointer;
+                box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+                transition: all 0.3s ease-out;
+            }
+            .button .icon{
+                display: inline-block;
+                height: 60px;
+                width: 60px;
+                text-align: center;
+                border-radius: 50px;
+                box-sizing: border-box;
+                transition: all 0.3s ease-out;
+            }
+            .button .icon ion-icon{
+                position: relative;
+                top: 15px;
+                font-size: 30px;
+                color: black;
+            }
+            .button span{
+                font-size: 20px;
+                font-weight: 500;
+                position: relative;
+                top: 5px;
+            }
+            .button:hover{
+                width: 140px;
+            }
+            #anchor{
+                text-decoration: none;
+            }
+            .delete-button .button:hover .icon{
+                background-color: #FF0063;
+            }
+            .delete-button .button:hover .icon ion-icon{
+                color: white;
+            }
+            .delete-button .button:hover span{
+                color: #EB4747
+            }
+            .edit-button .button:hover .icon{
+                background-color: #3BACB6;
+            }
+            .edit-button .button:hover .icon ion-icon{
+                color: white;
+            }
+            .edit-button .button:hover span{
+                color: #2F8F9D;
+            }
+            
+
+        </style>
+    <head>
+    <body>
+        <div class="blog-container" style="border-radius: 1rem;">
+        <div class="card custom-card ">
+            <% const blogUrl = "https://source.unsplash.com/random/900x300/?"+blogTheme%> 
+            <img src=<%=blogUrl%> class="card-img-top" alt="blogPost">
+
+            <div class="row g-2">
+                <div class="edit-button col-md">
+                    <a id="anchor" href="/<%=username%>/posts/<%=blogTheme%>/edit" >
+                        <div class="button">
+                                <div class="icon"><ion-icon name="pencil"></ion-icon></div>
+                                <span>Edit</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="delete-button col-md">
+                    <a id="anchor" href="/<%=username%>/posts/delete/<%=blogTheme%>" >
+                        <div class="button">
+                                <div class="icon"><ion-icon name="trash"></ion-icon></div>
+                                <span>Delete</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title"><%=blogTheme%></h5>
+              <p class="card-text"><%=blogContent%></p>
+            </div>
+          </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   
+    </body>
+</html>
